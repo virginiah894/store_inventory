@@ -1,0 +1,30 @@
+{%extends 'partials/base.html' %}
+{% block title %} Edit Product {% endblock %}
+{% load crispy_forms_tags %}
+
+
+
+{% block content%}
+
+
+<div class="row my-4">
+    <div class="col-md-6 offset-md-3 bg-white p-3">
+        <h3>Update Product Details </h3>
+        <hr>
+
+        <form method="POST">
+            {% csrf_token%}
+
+            {{form| crispy}}
+
+            <a class="btn btn-secondary" href="{% url 'dash-products'%}">Cancel </a>
+            <input class="btn btn-info" type="submit" value="confirm">
+        </form>
+
+
+
+    </div>
+</div>
+
+
+{% endblock%}
