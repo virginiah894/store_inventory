@@ -17,40 +17,26 @@
                 <th scope="col">Category</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Ordered by</th>
+                <th scope="col">Date</th>
+
             </tr>
         </thead>
         <tbody>
+            {% for order in order%}
+
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row">{{order.id}}</th>
+                <td>{{order.product.name}}</td>
+                <td>{{order.product.category}}</td>
+                <td>{{order.order_quantity}}</td>
                 <td>
-                    Periah
+                    {{order.staff.username}} 
                 </td>
+                <td>{{ order.date}}</td>
 
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>
-                  Vee
-                </td>
+            {% endfor %}
 
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>
-                   Hancel
-
-                </td>
-
-            </tr>
         </tbody>
     </table>
 

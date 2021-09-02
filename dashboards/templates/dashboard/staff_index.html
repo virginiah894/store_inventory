@@ -1,4 +1,6 @@
+
 {% load crispy_forms_tags %}
+{%block content %}
 <div>
     <div class="row mt-4">
         <div class="col-md-4">
@@ -30,12 +32,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for order in order %}
-                            {% if order.customer == user %}
+                            {% for order in orders %}
+                            {% if order.staff == user %}
                             <tr>
-                                <td>{{ order.name }}</td>
-                                <td>{{ order.name.category }}</td>
-                                <td>{{ order.order_quantity }}</td>
+                                <td>{{order.product.name}}</td>
+                                <td>{{order.product.category}}</td>
+                                <td>{{order.order_quantity}}</td>
                             </tr>
                             {% endif %}
                             {% endfor %}
@@ -46,3 +48,4 @@
         </div>
     </div>
 </div>
+{% endblock %}
