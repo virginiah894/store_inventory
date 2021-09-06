@@ -7,7 +7,7 @@
           </div>
             <div class="card-body">
               <marquee behavior="" direction="">
-                <h4 class="my-4">New information
+                <h4 class="my-4">New information !!!
   
                 </h4>
               </marquee>
@@ -27,6 +27,8 @@
                 <a class="text-decoration-none text-dark" href="{% url 'dash-staff'%}">
                             <div class="card onec shadow text-center  p-3">
                 <h4>Staff <i class="fas fa-users"></i></h4>
+                <h4>{{staff_count}}</h4>
+
 
               </div>
             </a>
@@ -34,7 +36,8 @@
             <div class="col-md-4">
               <a class="text-decoration-none text-dark" href="{% url 'dash-products'%}">
                           <div class="card onec shadow text-center p-3">
-              <h4>Products<i class="fas fa-box"></i></h4>
+              <h4>Products <i class="fas fa-box"></i></h4>
+              <h4>{{products_count}}</h4>
 
             </div>
           </a>
@@ -43,6 +46,8 @@
             <a class="text-decoration-none text-dark" href="{% url 'dash-orders'%}">
                         <div class="card onec shadow text-center  p-3">
             <h4>Orders <i class="fas fa-shipping-fast"></i></h4>
+            <h4>{{orders_count}}</h4>
+
 
           </div>
         </a>
